@@ -21,7 +21,7 @@ const Categories: React.FC<ICategoriesProps> = ({}) => {
     <div className="bg-white shadow-lg rounded-lg p-8 mb-8 pb-12">
       <h3 className="text-xl mb-8 font-semibold border-b-2 pb-4">Categories</h3>
       {categories.map((category: ICategoryProps) => (
-        <Link href={`/category/${category.slug}`} key={category.slug}>
+        <Link href={`/posts?category=${category.slug}`} key={category.slug}>
           <span className="cursor-pointer block pb-3 mb-3">
             {category.name}
           </span>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "./";
+import { Footer } from "./Footer";
 
 export type ILayoutProps = {
   children: any;
@@ -7,10 +8,13 @@ export type ILayoutProps = {
 
 const Layout: React.FC<ILayoutProps> = ({ children }) => {
   return (
-    <>
-      <Header />
-      {children}
-    </>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex flex-1 flex-col">
+        <Header />
+        {children}
+      </div>
+      <Footer />
+    </div>
   );
 };
 
